@@ -1,0 +1,234 @@
+/* Start Global Rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+ul {
+  list-style: none;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Custom */
+@media (max-width: 485px) {
+  .container {
+    max-width: 450px;
+  }
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* End Global Rules */
+/* Start Header */
+header {
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 97px;
+}
+header .container .nav {
+  display: flex;
+  align-items: center;
+}
+header .container .nav ul {
+  display: flex;
+}
+header .container .nav ul a {
+  text-decoration: none;
+  color: #292929;
+  font-weight: 500;
+  padding: 10px 20px;
+  transition: 0.3s;
+}
+header .container .nav ul a:hover {
+  color: #cc3333;
+}
+header .container button {
+  color: white;
+  border: none;
+  background-color: #cc3333;
+  padding: 10px 25px;
+  border-radius: 20px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+header .container button:hover {
+  transform: scale(1.1);
+}
+/* End Header */
+/* Start Landing */
+.landing {
+  min-height: 100vh;
+  background-image: url(../Images/banner-bg.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.landing .container {
+  position: relative;
+}
+.landing .container .content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 20%);
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.landing .container .content .info h4 {
+  color: #cc3333;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  font-family: "Lobster", cursive;
+}
+.landing .container .content .info p:nth-child(3) {
+  color: #666;
+  font-size: 15px;
+  line-height: 25px;
+  font-weight: 400;
+}
+.landing .container .content .info h1 {
+  font-size: 50px;
+  color: #292929;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 23px 0px;
+}
+.landing .container .content .info h1 span {
+  color: #cc3333;
+  text-decoration: underline;
+}
+.landing .container .content .info .order {
+  margin: 40px 0 0;
+  display: flex;
+  align-items: center;
+}
+.landing .container .content .info .order a {
+  text-decoration: none;
+  color: white;
+  background-color: #cc3333;
+  padding: 10px 20px;
+  margin: 0px 35px 0 0;
+  transition: 0.3s;
+}
+.landing .container .content .info .order a:hover {
+  background-color: #292929;
+}
+.landing .container .content .info .order .but {
+  width: 50px;
+  height: 50px;
+  background-color: #cc3333;
+  border-radius: 50%;
+  margin: 0 15px 0 0;
+  position: relative;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.landing .container .content .info .order p {
+  color: #292929;
+  font-size: 15px;
+  font-weight: 500;
+}
+.landing .container .content .info .order .but i {
+  font-size: 20px;
+  color: white;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+}
+.landing .container .content .info .order .but:hover {
+  transform: translateY(-5px);
+}
+.landing .container .content img {
+  max-width: 100%;
+  height: auto;
+  animation-name: spin;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 1199px) {
+  .landing .container .content {
+    transform: translate(-50%, 40%);
+  }
+}
+@media (max-width: 991px) {
+  header .container .nav ul a {
+    padding: 10px 10px;
+  }
+  .landing .container .content {
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: none;
+    transform: translate(-50%, 50%);
+  }
+  .landing .container img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 95%);
+  }
+  .landing .container {
+    text-align: center;
+  }
+  .landing .container .content .info .order {
+    justify-content: center;
+  }
+  .landing {
+    min-height: 151vh;
+    background-size: contain;
+    height: 100%;
+  }
+}
+@media (max-width: 767px) {
+  header .container .nav {
+    display: none;
+  }
+}
